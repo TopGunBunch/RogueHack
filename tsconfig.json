@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "jsx": "react",
+        "lib": ["dom", "es2019"],
+        "types": ["excalibur"],
+        "target": "es5",
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "preserveConstEnums": true,
+        "removeComments": true,
+        "sourceMap": true,
+        "strictNullChecks": true,
+        "esModuleInterop": true,
+    },
+    "include": [
+        "src/**/*.ts",
+        "declarations/*.ts",
+    ]
+}
