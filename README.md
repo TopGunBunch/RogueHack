@@ -1,2 +1,4 @@
-= Hackaton roguelike
+# RogueHack
+TopGunBunch Hackaton Roguelike game
+
 Bla
