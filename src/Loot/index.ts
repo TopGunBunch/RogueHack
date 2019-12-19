@@ -2,31 +2,31 @@ export class Loot {
     private LOOT_CATALOGUE: {
         weapon: {
             woodStick: {
-                name: 'Wood stick';
+                name: 'Wood stick',
                 power: 1,
                 rareness: 1,
             },
             blade: {
-                name: 'Blade';
+                name: 'Blade',
                 power: 3,
                 rareness: 3,
             },
             hatchet: {
-                name: 'Hatchet';
+                name: 'Hatchet',
                 power: 5,
                 rareness: 5,
             },
         },
         protection: {
             helmet: {
-                name: 'Helmet';
+                name: 'Helmet',
                 power: 5,
                 rareness: 5,
             },
         },
         food: {
             dragonWings: {
-                name: 'Dragon wings';
+                name: 'Dragon wings',
                 power: 5,
                 rareness: 5,
             }
