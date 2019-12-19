@@ -9,9 +9,13 @@ export class MapRenderer {
 
     private game: ex.Engine;
 
-    private map: Array<Array<ex.Texture>>;
+    private map: Array<Array<ex.Texture | undefined>> = [];
 
     constructor(game: ex.Engine) {
         this.game = game;
+        for (let i = 0; i < MapRenderer.WIDTH; i++) {
+            this.map[i] = [];
+        }
     }
+
 }
