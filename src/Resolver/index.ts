@@ -34,11 +34,11 @@ export class Resolver {
         });
     }
 
-    resolve(a: Message) {
+    resolve(a: Event) {
         let done = false;
         const listeners = this.listeners.filter(x => x.type === a.type);
         for (let i = 0; i < listeners.length; i++) {
-            done = listeners[i].resolve(a.payload);
+            done = listeners[i].resolve(a, this.world);
             if (done) {
                 return;
             }
