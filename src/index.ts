@@ -2,6 +2,9 @@ import * as ex from 'excalibur';
 
 import * as styles from './styles.css';
 
+import {MapRenderer} from "./ui/MapRenderer";
+import {Textures} from "./ui/Textures";
+
 function makePaddle(game: ex.Engine): ex.Actor {
     // Create an actor with x position of 150px,
     // y position of 40px from the bottom of the screen,
@@ -144,10 +147,12 @@ function makeBricks(game: ex.Engine): ex.Actor[] {
 function main(canvasId: string): void {
     // Create an instance of the engine.
     const game = new ex.Engine({
-        width: 800,
-        height: 600,
+        width: MapRenderer.WIDTH * MapRenderer.SPRITE_SIZE,
+        height: MapRenderer.HEIGHT * MapRenderer.SPRITE_SIZE,
         canvasElementId: canvasId,
     });
+
+    const mapRenderer = new MapRenderer(game);
 
     const paddle = makePaddle(game);
     const bricks = makeBricks(game);
@@ -162,7 +167,8 @@ function main(canvasId: string): void {
     });
 
     // Start the engine to begin the game.
-    game.start();
+    const loader = new ex.Loader(Textures.getAllAsArray());
+    game.start(loader);
 }
 
 window.addEventListener('DOMContentLoaded', () => {
