@@ -24,6 +24,10 @@ export class World {
         });
     }
 
+    addThing(thing: any) {
+        this.things.push(thing);
+    }
+
     do() {
         for (let i = 0; i < this.things.length; i++) {
             const thing = this.things[i];
@@ -39,9 +43,5 @@ export class World {
     render() {
 
         // for (let i = 0; i < this.ma)
-    }
-
-    addThing(a: IThing) {
-        this.things.push(a);
     }
 }
