@@ -1,4 +1,4 @@
-export class Index {
+export class Loot {
     private LOOT_CATALOGUE: {
         weapon: {
             woodStick: {
