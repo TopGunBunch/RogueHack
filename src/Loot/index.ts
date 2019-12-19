@@ -43,7 +43,7 @@ export class Loot {
     private lootGenerator() {
         const categoriesOfLoot = Object.keys(this.LOOT_CATALOGUE);
         const catalogueCategoriesSize = categoriesOfLoot.length;
-        const chosenCategory = this.LOOT_CATALOGUE[categoriesOfLoot[this.getRandom(catalogueCategoriesSize - 1)])];
+        const chosenCategory = this.LOOT_CATALOGUE[categoriesOfLoot[this.getRandom(catalogueCategoriesSize - 1)]];
         const lootsKeys = Object.keys(chosenCategory);
         const lootsQuantity = lootsKeys.length;
         const tempLoot = chosenCategory[lootsKeys[this.getRandom(lootsQuantity - 1)]];
